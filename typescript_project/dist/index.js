@@ -1,4 +1,8 @@
 let studnet = "John";
-function doSomething() {
-    return studnet.toLowerCase();
+let grade1 = 8;
+let grade2 = 9;
+let isApproved;
+function average(num1, num2) {
+    return (num1 + num2) / 2;
 }
+console.log(average(grade1, grade2));
