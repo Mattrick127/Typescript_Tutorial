@@ -17,9 +17,28 @@ function finalGrade(grades) {
 function printStudent(student) {
     console.log("Name: ", student.name);
     console.log("Final grade: ", finalGrade(student.grades));
+    console.log("Is Approved: ", student.isApproved);
 }
 let newStudent = {
     name: "John",
     grades: ["8", "7"]
 };
-printStudent(newStudent);
+let students = [
+    {
+        name: "John",
+        grades: ["8", "4"],
+        isApproved: true
+    },
+    {
+        name: "Joan",
+        grades: ["2", "3"],
+        isApproved: false
+    },
+    {
+        name: "Jane",
+        grades: ["10", "9"],
+    }
+];
+students.forEach(student => {
+    printStudent(student);
+});

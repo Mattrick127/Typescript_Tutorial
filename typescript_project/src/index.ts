@@ -24,13 +24,15 @@ function finalGrade(grades : string[]) {
 
 type Student = {
     name: string,
-    grades: string[]
+    grades: string[],
+    isApproved?: boolean
 };
 
 
 function printStudent(student : Student) {
     console.log("Name: ", student.name);
     console.log("Final grade: ", finalGrade(student.grades));
+    console.log("Is Approved: ", student.isApproved);
 }
 
 let newStudent = {
@@ -38,4 +40,24 @@ let newStudent = {
     grades: ["8", "7"]
 }
 
-printStudent(newStudent);
+
+let students : Student[] = [
+    {
+        name: "John",
+        grades: ["8", "4"],
+        isApproved: true
+    },
+    {
+        name: "Joan",
+        grades: ["2", "3"],
+        isApproved: false
+    },
+    {
+        name: "Jane",
+        grades: ["10", "9"],
+    }
+];
+
+students.forEach(student => {
+    printStudent(student);
+});
