@@ -14,6 +14,8 @@ function finalGrade(grades) {
     grades.forEach(grade => sum += parseFloat(grade));
     return sum / grades.length;
 }
+;
+;
 function printStudent(student) {
     console.log("Name: ", student.name);
     console.log("Final grade: ", finalGrade(student.grades));
@@ -37,6 +39,7 @@ let students = [
     {
         name: "Jane",
         grades: ["10", "9"],
+        isApproved: true
     }
 ];
 students.forEach(student => {

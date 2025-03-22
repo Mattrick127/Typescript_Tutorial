@@ -22,8 +22,13 @@ function finalGrade(grades : string[]) {
 
 }
 
-type Student = {
+interface Person {
     name: string,
+    grades: string[],
+    isApproved?: boolean
+};
+
+interface Student extends Person {
     grades: string[],
     isApproved?: boolean
 };
@@ -55,6 +60,7 @@ let students : Student[] = [
     {
         name: "Jane",
         grades: ["10", "9"],
+        isApproved: true
     }
 ];
 
