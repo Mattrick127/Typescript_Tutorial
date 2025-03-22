@@ -21,4 +21,21 @@ function finalGrade(grades : string[]) {
     return sum / grades.length;
 
 }
-console.log(finalGrade(grades));
+
+type Student = {
+    name: string,
+    grades: string[]
+};
+
+
+function printStudent(student : Student) {
+    console.log("Name: ", student.name);
+    console.log("Final grade: ", finalGrade(student.grades));
+}
+
+let newStudent = {
+    name: "John",
+    grades: ["8", "7"]
+}
+
+printStudent(newStudent);
