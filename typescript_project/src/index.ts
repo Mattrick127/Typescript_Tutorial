@@ -67,3 +67,23 @@ let students : Student[] = [
 students.forEach(student => {
     printStudent(student);
 });
+
+function buttonStyle(size: "small" | "large") {
+    let style: {height: string, width: string};
+
+    if (size == "small") {
+        style = {
+            height: "60px",
+            width: "100px"
+        }
+    } else {
+        style = {
+            height: "80px",
+            width: "140px"
+        }
+    }
+
+    return style;
+}
+
+console.log( buttonStyle("large"));
