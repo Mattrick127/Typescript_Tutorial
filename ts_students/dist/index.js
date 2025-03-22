@@ -1,12 +1,12 @@
 import data from './data.js';
 const students = JSON.parse(data);
 console.log(students);
-function addRow(table) {
+function addRow(table, student) {
     let tr = table.querySelector("tbody").insertRow();
     const name = tr.insertCell();
-    name.appendChild(document.createTextNode("Elena Garcia"));
+    name.appendChild(document.createTextNode(`${student.firstName} ${student.lastName}`));
     const age = tr.insertCell();
-    age.appendChild(document.createTextNode("33"));
+    age.appendChild(document.createTextNode((new Date().getFullYear() - parseInt(student.birthYear)).toString()));
     const majors = tr.insertCell();
     majors.appendChild(document.createTextNode("Space Engineering, Civil Engineering"));
     const status = tr.insertCell();
@@ -17,4 +17,4 @@ function selectTable() {
     return document.querySelector("#students-table");
 }
 // add a row
-addRow(selectTable());
+addRow(selectTable(), students[0]);
